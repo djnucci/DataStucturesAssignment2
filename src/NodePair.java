@@ -23,5 +23,8 @@ public class NodePair {
 		this.connection = connection;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return value + " " + connection;
+	}
 }

@@ -33,8 +33,42 @@ public class DirectedGraph {
 				graph.get(instanceIndex).addConnection(pairs.getNodeSet().get(i).getConnection());
 			}
 			else {
+				//if it doesn't, make a new node in the graph
 				graph.add(new GraphNode(pairs.getNodeSet().get(i).getValue(), pairs.getNodeSet().get(i).getConnection()));
 			}
 		}
 	}
+	
+	public ArrayList<Integer> traverse(SearchType type, int startingNodeValue) {
+		switch(type) {
+			case DFS:
+				return TraverseDFS(startingNodeValue);
+			case BFS:
+				return TraverseBFS(startingNodeValue);
+			default:
+				return null;
+		}
+	}
+	
+	private ArrayList<Integer> TraverseDFS(int start) {
+				
+	}
+	
+	private ArrayList<Integer> TraverseBFS(int start) {
+				
+	}
+	
+	public ArrayList<Integer> path(int start, int end) {
+		
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
