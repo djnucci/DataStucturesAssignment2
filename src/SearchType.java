@@ -2,7 +2,7 @@
 public enum SearchType {
 	DFS, BFS, PATH, CYCLE, INVALID;
 
-	public String enumToString(SearchType search) {
+	public static String enumToString(SearchType search) {
 		switch(search) {
 			case DFS:
 				return "DTS";
@@ -17,15 +17,15 @@ public enum SearchType {
 		}
 	}
 	
-	public SearchType stringToEnum(String search) {
-		switch(search) {
+	public static SearchType stringToEnum(String search) {
+		switch(search.toUpperCase()) {
 			case "DTS":
 				return DFS;
 			case "BFS":
 				return BFS;
-			case "Path":
+			case "PATH":
 				return PATH;
-			case "Cycle":
+			case "CYCLE":
 				return CYCLE;
 			default:
 				return INVALID;
